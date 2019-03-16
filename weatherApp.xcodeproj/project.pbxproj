@@ -15,6 +15,10 @@
 		ED4969E7223BEB20005B0B6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4969E5223BEB20005B0B6B /* LaunchScreen.storyboard */; };
 		ED4969F2223BEB20005B0B6B /* weatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4969F1223BEB20005B0B6B /* weatherAppTests.swift */; };
 		EDAB05E6223CE397003CA764 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAB05E5223CE397003CA764 /* ColorExtension.swift */; };
+		EDAB05E9223CE46D003CA764 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAB05E8223CE46D003CA764 /* ThemeManager.swift */; };
+		EDAB05EB223CE4B2003CA764 /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAB05EA223CE4B2003CA764 /* ThemeProtocol.swift */; };
+		EDAB05ED223CE54C003CA764 /* LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAB05EC223CE54C003CA764 /* LightTheme.swift */; };
+		EDAB05EF223CE656003CA764 /* DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAB05EE223CE656003CA764 /* DarkTheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,10 @@
 		ED4969F1223BEB20005B0B6B /* weatherAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherAppTests.swift; sourceTree = "<group>"; };
 		ED4969F3223BEB20005B0B6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDAB05E5223CE397003CA764 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		EDAB05E8223CE46D003CA764 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		EDAB05EA223CE4B2003CA764 /* ThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
+		EDAB05EC223CE54C003CA764 /* LightTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTheme.swift; sourceTree = "<group>"; };
+		EDAB05EE223CE656003CA764 /* DarkTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkTheme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +132,7 @@
 		ED4969FE223BEB86005B0B6B /* app-ui */ = {
 			isa = PBXGroup;
 			children = (
+				EDAB05E7223CE44A003CA764 /* ThemeManager */,
 			);
 			path = "app-ui";
 			sourceTree = "<group>";
@@ -148,6 +157,17 @@
 				EDAB05E5223CE397003CA764 /* ColorExtension.swift */,
 			);
 			path = "ui-utils";
+			sourceTree = "<group>";
+		};
+		EDAB05E7223CE44A003CA764 /* ThemeManager */ = {
+			isa = PBXGroup;
+			children = (
+				EDAB05E8223CE46D003CA764 /* ThemeManager.swift */,
+				EDAB05EA223CE4B2003CA764 /* ThemeProtocol.swift */,
+				EDAB05EC223CE54C003CA764 /* LightTheme.swift */,
+				EDAB05EE223CE656003CA764 /* DarkTheme.swift */,
+			);
+			path = ThemeManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,8 +273,12 @@
 			files = (
 				ED4969DC223BEB1F005B0B6B /* ViewController.swift in Sources */,
 				ED4969E2223BEB1F005B0B6B /* weatherApp.xcdatamodeld in Sources */,
+				EDAB05E9223CE46D003CA764 /* ThemeManager.swift in Sources */,
+				EDAB05EB223CE4B2003CA764 /* ThemeProtocol.swift in Sources */,
 				ED4969DA223BEB1F005B0B6B /* AppDelegate.swift in Sources */,
+				EDAB05ED223CE54C003CA764 /* LightTheme.swift in Sources */,
 				EDAB05E6223CE397003CA764 /* ColorExtension.swift in Sources */,
+				EDAB05EF223CE656003CA764 /* DarkTheme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
