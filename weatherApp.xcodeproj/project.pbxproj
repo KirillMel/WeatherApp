@@ -89,18 +89,17 @@
 		ED4969D8223BEB1F005B0B6B /* weatherApp */ = {
 			isa = PBXGroup;
 			children = (
-				ED4969FF223BEB97005B0B6B /* app-services */,
-				ED4969FE223BEB86005B0B6B /* app-ui */,
-				ED4969FD223BEB3C005B0B6B /* common-utils */,
-				ED496A00223BEB9E005B0B6B /* app-settings */,
+				EDAB05F0223CE70D003CA764 /* app-data */,
 				ED4969FC223BEB2E005B0B6B /* app-modules */,
-				ED4969D9223BEB1F005B0B6B /* AppDelegate.swift */,
-				ED4969DB223BEB1F005B0B6B /* ViewController.swift */,
-				ED4969DD223BEB1F005B0B6B /* Main.storyboard */,
+				ED4969FF223BEB97005B0B6B /* app-services */,
+				ED496A00223BEB9E005B0B6B /* app-settings */,
+				ED4969FE223BEB86005B0B6B /* app-ui */,
 				ED4969E3223BEB20005B0B6B /* Assets.xcassets */,
-				ED4969E5223BEB20005B0B6B /* LaunchScreen.storyboard */,
+				ED4969FD223BEB3C005B0B6B /* common-utils */,
 				ED4969E8223BEB20005B0B6B /* Info.plist */,
-				ED4969E0223BEB1F005B0B6B /* weatherApp.xcdatamodeld */,
+				ED4969E5223BEB20005B0B6B /* LaunchScreen.storyboard */,
+				ED4969DD223BEB1F005B0B6B /* Main.storyboard */,
+				ED4969DB223BEB1F005B0B6B /* ViewController.swift */,
 			);
 			path = weatherApp;
 			sourceTree = "<group>";
@@ -147,6 +146,7 @@
 		ED496A00223BEB9E005B0B6B /* app-settings */ = {
 			isa = PBXGroup;
 			children = (
+				ED4969D9223BEB1F005B0B6B /* AppDelegate.swift */,
 			);
 			path = "app-settings";
 			sourceTree = "<group>";
@@ -168,6 +168,14 @@
 				EDAB05EE223CE656003CA764 /* DarkTheme.swift */,
 			);
 			path = ThemeManager;
+			sourceTree = "<group>";
+		};
+		EDAB05F0223CE70D003CA764 /* app-data */ = {
+			isa = PBXGroup;
+			children = (
+				ED4969E0223BEB1F005B0B6B /* weatherApp.xcdatamodeld */,
+			);
+			path = "app-data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
