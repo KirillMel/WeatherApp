@@ -14,6 +14,7 @@
 		ED4969E4223BEB20005B0B6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED4969E3223BEB20005B0B6B /* Assets.xcassets */; };
 		ED4969E7223BEB20005B0B6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4969E5223BEB20005B0B6B /* LaunchScreen.storyboard */; };
 		ED4969F2223BEB20005B0B6B /* weatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4969F1223BEB20005B0B6B /* weatherAppTests.swift */; };
+		EDAB05E6223CE397003CA764 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAB05E5223CE397003CA764 /* ColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		ED4969ED223BEB20005B0B6B /* weatherAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = weatherAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4969F1223BEB20005B0B6B /* weatherAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherAppTests.swift; sourceTree = "<group>"; };
 		ED4969F3223BEB20005B0B6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDAB05E5223CE397003CA764 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		ED4969FD223BEB3C005B0B6B /* common-utils */ = {
 			isa = PBXGroup;
 			children = (
+				EDAB05E4223CE366003CA764 /* ui-utils */,
 			);
 			path = "common-utils";
 			sourceTree = "<group>";
@@ -137,6 +140,14 @@
 			children = (
 			);
 			path = "app-settings";
+			sourceTree = "<group>";
+		};
+		EDAB05E4223CE366003CA764 /* ui-utils */ = {
+			isa = PBXGroup;
+			children = (
+				EDAB05E5223CE397003CA764 /* ColorExtension.swift */,
+			);
+			path = "ui-utils";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +254,7 @@
 				ED4969DC223BEB1F005B0B6B /* ViewController.swift in Sources */,
 				ED4969E2223BEB1F005B0B6B /* weatherApp.xcdatamodeld in Sources */,
 				ED4969DA223BEB1F005B0B6B /* AppDelegate.swift in Sources */,
+				EDAB05E6223CE397003CA764 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
