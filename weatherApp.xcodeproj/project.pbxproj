@@ -79,6 +79,11 @@
 		ED4969D8223BEB1F005B0B6B /* weatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				ED4969FF223BEB97005B0B6B /* app-services */,
+				ED4969FE223BEB86005B0B6B /* app-ui */,
+				ED4969FD223BEB3C005B0B6B /* common-utils */,
+				ED496A00223BEB9E005B0B6B /* app-settings */,
+				ED4969FC223BEB2E005B0B6B /* app-modules */,
 				ED4969D9223BEB1F005B0B6B /* AppDelegate.swift */,
 				ED4969DB223BEB1F005B0B6B /* ViewController.swift */,
 				ED4969DD223BEB1F005B0B6B /* Main.storyboard */,
@@ -97,6 +102,41 @@
 				ED4969F3223BEB20005B0B6B /* Info.plist */,
 			);
 			path = weatherAppTests;
+			sourceTree = "<group>";
+		};
+		ED4969FC223BEB2E005B0B6B /* app-modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "app-modules";
+			sourceTree = "<group>";
+		};
+		ED4969FD223BEB3C005B0B6B /* common-utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "common-utils";
+			sourceTree = "<group>";
+		};
+		ED4969FE223BEB86005B0B6B /* app-ui */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "app-ui";
+			sourceTree = "<group>";
+		};
+		ED4969FF223BEB97005B0B6B /* app-services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "app-services";
+			sourceTree = "<group>";
+		};
+		ED496A00223BEB9E005B0B6B /* app-settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "app-settings";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
