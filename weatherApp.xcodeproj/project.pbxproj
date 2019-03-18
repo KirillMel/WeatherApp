@@ -7,18 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED1201032240415F003453C6 /* AlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1201022240415F003453C6 /* AlertExtension.swift */; };
 		ED4969DA223BEB1F005B0B6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4969D9223BEB1F005B0B6B /* AppDelegate.swift */; };
-		ED4969DC223BEB1F005B0B6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4969DB223BEB1F005B0B6B /* ViewController.swift */; };
 		ED4969DF223BEB1F005B0B6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4969DD223BEB1F005B0B6B /* Main.storyboard */; };
 		ED4969E2223BEB1F005B0B6B /* weatherApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED4969E0223BEB1F005B0B6B /* weatherApp.xcdatamodeld */; };
 		ED4969E4223BEB20005B0B6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED4969E3223BEB20005B0B6B /* Assets.xcassets */; };
 		ED4969E7223BEB20005B0B6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4969E5223BEB20005B0B6B /* LaunchScreen.storyboard */; };
 		ED4969F2223BEB20005B0B6B /* weatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4969F1223BEB20005B0B6B /* weatherAppTests.swift */; };
+		ED9ABB7D223F7B8700DA6B0C /* MapScreenProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9ABB7C223F7B8700DA6B0C /* MapScreenProtocols.swift */; };
+		ED9ABB7F223F7B9D00DA6B0C /* MapScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9ABB7E223F7B9D00DA6B0C /* MapScreenView.swift */; };
+		ED9ABB81223F7BAB00DA6B0C /* MapScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9ABB80223F7BAB00DA6B0C /* MapScreenPresenter.swift */; };
+		ED9ABB83223F7BBC00DA6B0C /* MapScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9ABB82223F7BBC00DA6B0C /* MapScreenInteractor.swift */; };
+		ED9ABB85223F7BCD00DA6B0C /* MapScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9ABB84223F7BCD00DA6B0C /* MapScreenRouter.swift */; };
+		ED9ABB87223F7BE400DA6B0C /* MapScreenConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9ABB86223F7BE400DA6B0C /* MapScreenConfigurator.swift */; };
+		ED9ABB8A223F7C6900DA6B0C /* BaseModuleProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9ABB89223F7C6900DA6B0C /* BaseModuleProtocols.swift */; };
 		EDAB05E6223CE397003CA764 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAB05E5223CE397003CA764 /* ColorExtension.swift */; };
 		EDAB05E9223CE46D003CA764 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAB05E8223CE46D003CA764 /* ThemeManager.swift */; };
 		EDAB05EB223CE4B2003CA764 /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAB05EA223CE4B2003CA764 /* ThemeProtocol.swift */; };
 		EDAB05ED223CE54C003CA764 /* LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAB05EC223CE54C003CA764 /* LightTheme.swift */; };
 		EDAB05EF223CE656003CA764 /* DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAB05EE223CE656003CA764 /* DarkTheme.swift */; };
+		EDEFB343224016B000744ED8 /* MapScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDEFB342224016B000744ED8 /* MapScreenViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,9 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED1201022240415F003453C6 /* AlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtension.swift; sourceTree = "<group>"; };
 		ED4969D6223BEB1F005B0B6B /* weatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4969D9223BEB1F005B0B6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ED4969DB223BEB1F005B0B6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ED4969DE223BEB1F005B0B6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED4969E1223BEB1F005B0B6B /* weatherApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = weatherApp.xcdatamodel; sourceTree = "<group>"; };
 		ED4969E3223BEB20005B0B6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,11 +51,19 @@
 		ED4969ED223BEB20005B0B6B /* weatherAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = weatherAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4969F1223BEB20005B0B6B /* weatherAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherAppTests.swift; sourceTree = "<group>"; };
 		ED4969F3223BEB20005B0B6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED9ABB7C223F7B8700DA6B0C /* MapScreenProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenProtocols.swift; sourceTree = "<group>"; };
+		ED9ABB7E223F7B9D00DA6B0C /* MapScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenView.swift; sourceTree = "<group>"; };
+		ED9ABB80223F7BAB00DA6B0C /* MapScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenPresenter.swift; sourceTree = "<group>"; };
+		ED9ABB82223F7BBC00DA6B0C /* MapScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenInteractor.swift; sourceTree = "<group>"; };
+		ED9ABB84223F7BCD00DA6B0C /* MapScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenRouter.swift; sourceTree = "<group>"; };
+		ED9ABB86223F7BE400DA6B0C /* MapScreenConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenConfigurator.swift; sourceTree = "<group>"; };
+		ED9ABB89223F7C6900DA6B0C /* BaseModuleProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModuleProtocols.swift; sourceTree = "<group>"; };
 		EDAB05E5223CE397003CA764 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		EDAB05E8223CE46D003CA764 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		EDAB05EA223CE4B2003CA764 /* ThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
 		EDAB05EC223CE54C003CA764 /* LightTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTheme.swift; sourceTree = "<group>"; };
 		EDAB05EE223CE656003CA764 /* DarkTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkTheme.swift; sourceTree = "<group>"; };
+		EDEFB342224016B000744ED8 /* MapScreenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapScreenViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED1200FF224040EF003453C6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ED1201022240415F003453C6 /* AlertExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		ED4969CD223BEB1F005B0B6B = {
 			isa = PBXGroup;
 			children = (
@@ -98,8 +122,6 @@
 				ED4969FD223BEB3C005B0B6B /* common-utils */,
 				ED4969E8223BEB20005B0B6B /* Info.plist */,
 				ED4969E5223BEB20005B0B6B /* LaunchScreen.storyboard */,
-				ED4969DD223BEB1F005B0B6B /* Main.storyboard */,
-				ED4969DB223BEB1F005B0B6B /* ViewController.swift */,
 			);
 			path = weatherApp;
 			sourceTree = "<group>";
@@ -116,6 +138,8 @@
 		ED4969FC223BEB2E005B0B6B /* app-modules */ = {
 			isa = PBXGroup;
 			children = (
+				ED9ABB88223F7C4800DA6B0C /* BaseModule */,
+				ED9ABB7B223F7AB200DA6B0C /* MapScreen */,
 			);
 			path = "app-modules";
 			sourceTree = "<group>";
@@ -131,6 +155,8 @@
 		ED4969FE223BEB86005B0B6B /* app-ui */ = {
 			isa = PBXGroup;
 			children = (
+				ED1200FF224040EF003453C6 /* Extensions */,
+				EDEFB3412240168D00744ED8 /* Scenes */,
 				EDAB05E7223CE44A003CA764 /* ThemeManager */,
 			);
 			path = "app-ui";
@@ -149,6 +175,27 @@
 				ED4969D9223BEB1F005B0B6B /* AppDelegate.swift */,
 			);
 			path = "app-settings";
+			sourceTree = "<group>";
+		};
+		ED9ABB7B223F7AB200DA6B0C /* MapScreen */ = {
+			isa = PBXGroup;
+			children = (
+				ED9ABB7C223F7B8700DA6B0C /* MapScreenProtocols.swift */,
+				ED9ABB7E223F7B9D00DA6B0C /* MapScreenView.swift */,
+				ED9ABB80223F7BAB00DA6B0C /* MapScreenPresenter.swift */,
+				ED9ABB82223F7BBC00DA6B0C /* MapScreenInteractor.swift */,
+				ED9ABB84223F7BCD00DA6B0C /* MapScreenRouter.swift */,
+				ED9ABB86223F7BE400DA6B0C /* MapScreenConfigurator.swift */,
+			);
+			path = MapScreen;
+			sourceTree = "<group>";
+		};
+		ED9ABB88223F7C4800DA6B0C /* BaseModule */ = {
+			isa = PBXGroup;
+			children = (
+				ED9ABB89223F7C6900DA6B0C /* BaseModuleProtocols.swift */,
+			);
+			path = BaseModule;
 			sourceTree = "<group>";
 		};
 		EDAB05E4223CE366003CA764 /* ui-utils */ = {
@@ -176,6 +223,15 @@
 				ED4969E0223BEB1F005B0B6B /* weatherApp.xcdatamodeld */,
 			);
 			path = "app-data";
+			sourceTree = "<group>";
+		};
+		EDEFB3412240168D00744ED8 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				EDEFB342224016B000744ED8 /* MapScreenViewController.storyboard */,
+				ED4969DD223BEB1F005B0B6B /* Main.storyboard */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +317,7 @@
 			files = (
 				ED4969E7223BEB20005B0B6B /* LaunchScreen.storyboard in Resources */,
 				ED4969E4223BEB20005B0B6B /* Assets.xcassets in Resources */,
+				EDEFB343224016B000744ED8 /* MapScreenViewController.storyboard in Resources */,
 				ED4969DF223BEB1F005B0B6B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,12 +336,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED4969DC223BEB1F005B0B6B /* ViewController.swift in Sources */,
+				ED9ABB7F223F7B9D00DA6B0C /* MapScreenView.swift in Sources */,
 				ED4969E2223BEB1F005B0B6B /* weatherApp.xcdatamodeld in Sources */,
+				ED9ABB8A223F7C6900DA6B0C /* BaseModuleProtocols.swift in Sources */,
+				ED1201032240415F003453C6 /* AlertExtension.swift in Sources */,
+				ED9ABB81223F7BAB00DA6B0C /* MapScreenPresenter.swift in Sources */,
 				EDAB05E9223CE46D003CA764 /* ThemeManager.swift in Sources */,
+				ED9ABB87223F7BE400DA6B0C /* MapScreenConfigurator.swift in Sources */,
+				ED9ABB7D223F7B8700DA6B0C /* MapScreenProtocols.swift in Sources */,
+				ED9ABB85223F7BCD00DA6B0C /* MapScreenRouter.swift in Sources */,
 				EDAB05EB223CE4B2003CA764 /* ThemeProtocol.swift in Sources */,
 				ED4969DA223BEB1F005B0B6B /* AppDelegate.swift in Sources */,
 				EDAB05ED223CE54C003CA764 /* LightTheme.swift in Sources */,
+				ED9ABB83223F7BBC00DA6B0C /* MapScreenInteractor.swift in Sources */,
 				EDAB05E6223CE397003CA764 /* ColorExtension.swift in Sources */,
 				EDAB05EF223CE656003CA764 /* DarkTheme.swift in Sources */,
 			);
