@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "weatherApp/app-modules/MapScreen/MapScreenView.swift"
-            timestampString = "574637393.9389451"
+            timestampString = "574637809.935165"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
@@ -106,28 +106,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "weatherApp/app-modules/MapScreen/MapScreenPresenter.swift"
-            timestampString = "574637393.939073"
+            timestampString = "574682069.382023"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "loadLocationDidSuccessful(data:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "weatherApp/app-modules/MapScreen/MapScreenInteractor.swift"
-            timestampString = "574637393.939145"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "getLocationInfo(altitude:longitude:)"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "loadLocationDidSuccessful(description:temperature:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

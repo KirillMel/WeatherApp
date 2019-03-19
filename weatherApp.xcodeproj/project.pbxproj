@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ED1201032240415F003453C6 /* AlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1201022240415F003453C6 /* AlertExtension.swift */; };
+		ED1873BC2240D9D500C31A97 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1873BB2240D9D500C31A97 /* LocationService.swift */; };
 		ED4969DA223BEB1F005B0B6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4969D9223BEB1F005B0B6B /* AppDelegate.swift */; };
 		ED4969DF223BEB1F005B0B6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4969DD223BEB1F005B0B6B /* Main.storyboard */; };
 		ED4969E2223BEB1F005B0B6B /* weatherApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED4969E0223BEB1F005B0B6B /* weatherApp.xcdatamodeld */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		ED1201022240415F003453C6 /* AlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtension.swift; sourceTree = "<group>"; };
+		ED1873BB2240D9D500C31A97 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		ED4969D6223BEB1F005B0B6B /* weatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4969D9223BEB1F005B0B6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED4969DE223BEB1F005B0B6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 		ED4969FF223BEB97005B0B6B /* app-services */ = {
 			isa = PBXGroup;
 			children = (
+				ED1873BB2240D9D500C31A97 /* LocationService.swift */,
 			);
 			path = "app-services";
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				ED9ABB7D223F7B8700DA6B0C /* MapScreenProtocols.swift in Sources */,
 				ED9ABB85223F7BCD00DA6B0C /* MapScreenRouter.swift in Sources */,
 				EDAB05EB223CE4B2003CA764 /* ThemeProtocol.swift in Sources */,
+				ED1873BC2240D9D500C31A97 /* LocationService.swift in Sources */,
 				ED4969DA223BEB1F005B0B6B /* AppDelegate.swift in Sources */,
 				EDAB05ED223CE54C003CA764 /* LightTheme.swift in Sources */,
 				ED9ABB83223F7BBC00DA6B0C /* MapScreenInteractor.swift in Sources */,
