@@ -7,6 +7,7 @@
 //
 
 import MapKit
+
 protocol LocationServiceProtocol: class {
     func getLocaction(altitude: Double, longitude: Double, completionHandler: @escaping (String) -> Void) -> Void
 }

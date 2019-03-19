@@ -12,4 +12,7 @@ target 'weatherApp' do
     # Pods for testing
   end
 
+pod 'ObjectMapper', '~> 3.4'
+pod 'Alamofire'
+
 end
