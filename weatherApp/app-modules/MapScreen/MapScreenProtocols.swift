@@ -20,7 +20,7 @@ protocol MapScreenPresenterToViewProtocol: BaseModulePresenterToViewProtocol {
 }
 
 protocol MapScreenPresenterToInteractorProtocol: BaseModulePresenterToInteractorProtocol {
-    func loadLocationDidSuccessful(description: String, temperature: String) -> Void
+    func loadLocationDidSuccessful(description: String, weather: (Int, String)) -> Void
     func loadLocationDidFail(error: String) -> Void
 }
 

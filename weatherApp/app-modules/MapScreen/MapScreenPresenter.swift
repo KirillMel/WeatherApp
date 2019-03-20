@@ -36,8 +36,12 @@ class MapScreenPresenter: MapScreenPresenterToViewProtocol, MapScreenPresenterTo
     }
     
     //MARK: - impelemntation MapScreenPresenterToInteractorProtocol
-    func loadLocationDidSuccessful(description: String, temperature: String) {
-        viewController?.addAnnotation(title: description, subtitle: temperature, altitude: altitude, longitude: longitude)
+    func loadLocationDidSuccessful(description: String, weather: (Int, String)) {
+        let temperature = weather.0
+        let weatherDescription = weather.1.capitalizingFirstLetter()
+        
+        let subtitle = (temperature>0) ? "+\(temperature), \(weatherDescription)" : "\(temperature), \(weatherDescription)"
+        viewController?.addAnnotation(title: description, subtitle: subtitle, altitude: altitude, longitude: longitude)
     }
     
     func loadLocationDidFail(error: String) {

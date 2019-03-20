@@ -11,7 +11,14 @@
 		44FDAB6EF9F5039478CE34B0 /* Pods_weatherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A863F1CB9B32D587E9B6C5 /* Pods_weatherApp.framework */; };
 		ED1201032240415F003453C6 /* AlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1201022240415F003453C6 /* AlertExtension.swift */; };
 		ED1873BC2240D9D500C31A97 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1873BB2240D9D500C31A97 /* LocationService.swift */; };
-		ED1AD17A22413396007A2F37 /* ServerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1AD17922413396007A2F37 /* ServerService.swift */; };
+		ED1AD17A22413396007A2F37 /* AlamofireWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1AD17922413396007A2F37 /* AlamofireWrapper.swift */; };
+		ED1AD17C2241438F007A2F37 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1AD17B2241438F007A2F37 /* RequestBuilder.swift */; };
+		ED1FEEAA22422526003C134D /* NetworkCompletion.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1FEEA922422526003C134D /* NetworkCompletion.swift */; };
+		ED1FEEAC22422783003C134D /* ServerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1FEEAB22422783003C134D /* ServerService.swift */; };
+		ED1FEEAE22422DA1003C134D /* Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1FEEAD22422DA1003C134D /* Parsing.swift */; };
+		ED1FEEB0224263AE003C134D /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1FEEAF224263AE003C134D /* AppConstants.swift */; };
+		ED1FEEB222426536003C134D /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1FEEB122426536003C134D /* DoubleExtension.swift */; };
+		ED1FEEB422426B4A003C134D /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1FEEB322426B4A003C134D /* StringExtension.swift */; };
 		ED4969DA223BEB1F005B0B6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4969D9223BEB1F005B0B6B /* AppDelegate.swift */; };
 		ED4969DF223BEB1F005B0B6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4969DD223BEB1F005B0B6B /* Main.storyboard */; };
 		ED4969E2223BEB1F005B0B6B /* weatherApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED4969E0223BEB1F005B0B6B /* weatherApp.xcdatamodeld */; };
@@ -51,7 +58,14 @@
 		C2A863F1CB9B32D587E9B6C5 /* Pods_weatherApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weatherApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1201022240415F003453C6 /* AlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtension.swift; sourceTree = "<group>"; };
 		ED1873BB2240D9D500C31A97 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
-		ED1AD17922413396007A2F37 /* ServerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerService.swift; sourceTree = "<group>"; };
+		ED1AD17922413396007A2F37 /* AlamofireWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireWrapper.swift; sourceTree = "<group>"; };
+		ED1AD17B2241438F007A2F37 /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		ED1FEEA922422526003C134D /* NetworkCompletion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCompletion.swift; sourceTree = "<group>"; };
+		ED1FEEAB22422783003C134D /* ServerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerService.swift; sourceTree = "<group>"; };
+		ED1FEEAD22422DA1003C134D /* Parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parsing.swift; sourceTree = "<group>"; };
+		ED1FEEAF224263AE003C134D /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		ED1FEEB122426536003C134D /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		ED1FEEB322426B4A003C134D /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		ED4969D6223BEB1F005B0B6B /* weatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4969D9223BEB1F005B0B6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED4969DE223BEB1F005B0B6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -120,7 +134,11 @@
 		ED1AD17822413387007A2F37 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				ED1AD17922413396007A2F37 /* ServerService.swift */,
+				ED1AD17922413396007A2F37 /* AlamofireWrapper.swift */,
+				ED1AD17B2241438F007A2F37 /* RequestBuilder.swift */,
+				ED1FEEA922422526003C134D /* NetworkCompletion.swift */,
+				ED1FEEAB22422783003C134D /* ServerService.swift */,
+				ED1FEEAD22422DA1003C134D /* Parsing.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -183,6 +201,9 @@
 			isa = PBXGroup;
 			children = (
 				EDAB05E4223CE366003CA764 /* ui-utils */,
+				ED1FEEAF224263AE003C134D /* AppConstants.swift */,
+				ED1FEEB122426536003C134D /* DoubleExtension.swift */,
+				ED1FEEB322426B4A003C134D /* StringExtension.swift */,
 			);
 			path = "common-utils";
 			sourceTree = "<group>";
@@ -452,17 +473,24 @@
 				ED9ABB7F223F7B9D00DA6B0C /* MapScreenView.swift in Sources */,
 				ED4969E2223BEB1F005B0B6B /* weatherApp.xcdatamodeld in Sources */,
 				ED9ABB8A223F7C6900DA6B0C /* BaseModuleProtocols.swift in Sources */,
+				ED1FEEAA22422526003C134D /* NetworkCompletion.swift in Sources */,
+				ED1AD17C2241438F007A2F37 /* RequestBuilder.swift in Sources */,
 				ED1201032240415F003453C6 /* AlertExtension.swift in Sources */,
+				ED1FEEAC22422783003C134D /* ServerService.swift in Sources */,
+				ED1FEEAE22422DA1003C134D /* Parsing.swift in Sources */,
 				ED9ABB81223F7BAB00DA6B0C /* MapScreenPresenter.swift in Sources */,
-				ED1AD17A22413396007A2F37 /* ServerService.swift in Sources */,
+				ED1FEEB0224263AE003C134D /* AppConstants.swift in Sources */,
+				ED1AD17A22413396007A2F37 /* AlamofireWrapper.swift in Sources */,
 				EDAB05E9223CE46D003CA764 /* ThemeManager.swift in Sources */,
 				ED9ABB87223F7BE400DA6B0C /* MapScreenConfigurator.swift in Sources */,
 				ED9ABB7D223F7B8700DA6B0C /* MapScreenProtocols.swift in Sources */,
 				ED9ABB85223F7BCD00DA6B0C /* MapScreenRouter.swift in Sources */,
 				EDAB05EB223CE4B2003CA764 /* ThemeProtocol.swift in Sources */,
+				ED1FEEB222426536003C134D /* DoubleExtension.swift in Sources */,
 				ED1873BC2240D9D500C31A97 /* LocationService.swift in Sources */,
 				ED4969DA223BEB1F005B0B6B /* AppDelegate.swift in Sources */,
 				EDAB05ED223CE54C003CA764 /* LightTheme.swift in Sources */,
+				ED1FEEB422426B4A003C134D /* StringExtension.swift in Sources */,
 				ED9ABB83223F7BBC00DA6B0C /* MapScreenInteractor.swift in Sources */,
 				EDAB05E6223CE397003CA764 /* ColorExtension.swift in Sources */,
 				EDAB05EF223CE656003CA764 /* DarkTheme.swift in Sources */,
