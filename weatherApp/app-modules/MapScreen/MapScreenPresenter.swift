@@ -35,13 +35,26 @@ class MapScreenPresenter: MapScreenPresenterToViewProtocol, MapScreenPresenterTo
         interactor?.getLocationInfo(altitude: altitude, longitude: longitude)
     }
     
+    func addCurrentLocationToFavorites() {
+        interactor?.saveCurrentLocation(altitude: altitude, longitude: longitude)
+    }
+    
+    func removeCurrentLocationFromFavorites() {
+        interactor?.removeCurrentLocation()
+    }
+    
     //MARK: - impelemntation MapScreenPresenterToInteractorProtocol
-    func loadLocationDidSuccessful(description: String, weather: (Int, String)) {
+    func loadLocationDidSuccessful(description: (String, String), weather: (Int, String)) {
         let temperature = weather.0
         let weatherDescription = weather.1.capitalizingFirstLetter()
         
+        let country = description.0
+        let region = description.1
+        
+        let title = "\(country), \(region)"
         let subtitle = (temperature>0) ? "+\(temperature), \(weatherDescription)" : "\(temperature), \(weatherDescription)"
-        viewController?.addAnnotation(title: description, subtitle: subtitle, altitude: altitude, longitude: longitude)
+        
+        viewController?.addAnnotation(title: title, subtitle: subtitle, altitude: altitude, longitude: longitude)
     }
     
     func loadLocationDidFail(error: String) {

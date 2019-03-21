@@ -19,6 +19,11 @@ class MapScreenViewController: UIViewController, MapScreenViewProtocol, Transiti
     
     //MARK: - Constants
     let regionInMeters: Double = 10000
+    let heighFovoriteButton: Int = 35
+    let widthFavoriteButton: Int = 35
+    
+    //MARK: - Variables
+    private var isAdded: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +35,7 @@ class MapScreenViewController: UIViewController, MapScreenViewProtocol, Transiti
     
     //MARK: - implementation MapScreenViewProtocol
     func addAnnotation(title: String, subtitle: String, altitude: Double, longitude: Double) {
+        isAdded = false
         let annotation = MKPointAnnotation()
         annotation.coordinate = CLLocationCoordinate2D(latitude: altitude, longitude: longitude)
         annotation.title = title
@@ -71,13 +77,13 @@ class MapScreenViewController: UIViewController, MapScreenViewProtocol, Transiti
         }
     }
     
-    private func centerViewOnUserLocation(_ a: CLLocationCoordinate2D) {
-        let region = MKCoordinateRegion.init(center: a , latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
+    private func centerViewOnUserLocation(_ location: CLLocationCoordinate2D) {
+        let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
         mapView.setRegion(region, animated: true)
     }
     
     //MARK: - Gestures
-    @objc func longTapOnMap(sender: UIGestureRecognizer){
+    @objc func longTapOnMap(sender: UIGestureRecognizer) {
         if sender.state == .began {
             deleteAnnotations()
             
@@ -101,7 +107,8 @@ extension MapScreenViewController: MKMapViewDelegate {
         if pinView == nil {
             pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
             pinView!.canShowCallout = true
-            pinView!.rightCalloutAccessoryView = UIButton(type: .contactAdd)
+            
+            pinView!.rightCalloutAccessoryView = UIButton(frame: CGRect(x: 0, y: 0, width: widthFavoriteButton, height: heighFovoriteButton))
             pinView!.pinTintColor = UIColor.black
         }
         else {
@@ -111,13 +118,40 @@ extension MapScreenViewController: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        print("Annotation Selected")
+        //set image on button
+        let button = view.rightCalloutAccessoryView as? UIButton
+        if (isAdded) {
+            button?.setImage(UIImage(named: "favorite_black.png"), for: .normal)
+        } else {
+            button?.setImage(UIImage(named: "favorite_white.png"), for: .normal)
+        }
     }
     
+    //MARK: - add to favorites
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        let button = view.rightCalloutAccessoryView as? UIButton
+        
         if control == view.rightCalloutAccessoryView {
-            if let doSomething = view.annotation?.title! {
-                print("\(doSomething) annotation clicked")
+            if view.annotation?.title != nil {
+                UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseIn, animations: { button?.alpha = 0 }, completion:
+                    { _ in
+                        if (!self.isAdded) {
+                            DispatchQueue.main.async {
+                                button?.setImage(UIImage(named: "favorite_black.png"), for: .normal)
+                            }
+                            self.presenter?.addCurrentLocationToFavorites()
+                        } else {
+                            DispatchQueue.main.async {
+                                button?.setImage(UIImage(named: "favorite_white.png"), for: .normal)
+                            }
+                            self.presenter?.removeCurrentLocationFromFavorites()
+                        }
+                        self.isAdded = !self.isAdded
+                    
+                        UIView.animate(withDuration: 0.25, animations: {
+                            button?.alpha = 1
+                        })
+                    })
             }
         }
     }

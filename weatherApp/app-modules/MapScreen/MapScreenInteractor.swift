@@ -14,9 +14,10 @@ class MapScreenInteractor: MapScreenInteractorProtocol {
     weak var presenter: MapScreenPresenterToInteractorProtocol?
     let locationService: LocationServiceProtocol = LocationService()
     let temperatureService = ServerTemperatureService()
+    let localStorage: LocalSorageProtocol = LocalStorage()
     
-    private var description: String = ""
-    private var temperature: (Int, String) = (0,"")
+    private var description: (country: String, region: String) = ("", "")
+    private var temperature: (celsium: Int, detail: String) = (0, "")
     let group = DispatchGroup()
     
     required init(presenter: MapScreenPresenterToInteractorProtocol) {
@@ -45,12 +46,20 @@ class MapScreenInteractor: MapScreenInteractorProtocol {
         }
     }
     
+    func saveCurrentLocation(altitude: Double, longitude: Double)  {
+        localStorage.saveItem(altitude, longitude, description, temperature.detail, temperature.celsium)
+    }
+    
+    func removeCurrentLocation() {
+        try? localStorage.deleteItem(withName: description.region)
+    }
+    
     private func getTemperature(altitude: Double, longitude: Double) {
         temperatureService.getTemperatur(latitude: altitude, longitute: longitude)
     }
     
     private func sendDataToPresenter() {
-        if (!description.isEmpty && !temperature.1.isEmpty) {
+        if (!description.region.isEmpty && !temperature.detail.isEmpty) {
             presenter?.loadLocationDidSuccessful(description: description, weather: temperature)
         }
     }

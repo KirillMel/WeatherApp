@@ -17,15 +17,19 @@ protocol MapScreenViewProtocol: BaseModuleViewProtocol {
 protocol MapScreenPresenterToViewProtocol: BaseModulePresenterToViewProtocol {
     func setUpModule() -> Void
     func locationDidSelected(altitude: Double, longitude: Double) -> Void
+    func addCurrentLocationToFavorites() -> Void
+    func removeCurrentLocationFromFavorites() -> Void
 }
 
 protocol MapScreenPresenterToInteractorProtocol: BaseModulePresenterToInteractorProtocol {
-    func loadLocationDidSuccessful(description: String, weather: (Int, String)) -> Void
+    func loadLocationDidSuccessful(description: (String, String), weather: (Int, String)) -> Void
     func loadLocationDidFail(error: String) -> Void
 }
 
 protocol MapScreenInteractorProtocol: BaseModuleInteractorProtocol {
     func getLocationInfo(altitude: Double, longitude: Double) -> Void
+    func saveCurrentLocation(altitude: Double, longitude: Double) -> Void
+    func removeCurrentLocation() -> Void
 }
 
 protocol MapScreenRouterProtocol: BaseModuleRouterProtocol {
