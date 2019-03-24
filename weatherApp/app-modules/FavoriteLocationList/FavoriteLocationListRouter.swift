@@ -17,7 +17,11 @@ class FavoriteLocationListRouter: FavoriteLocationListRouterProtocol {
     
     func moveToDetail(location: Location) {
         viewController.openModule(segueIdentifier: "showWeatherDetail", configurationBlock: { input in
-            
+            guard let input = input as? DetailLocationModuleInputProtocol else {
+                return
+            }
+            input.setUpWith(location: location)
+            return
         })
     }
 }

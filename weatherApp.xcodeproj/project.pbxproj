@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		419D2FCAE0BA43AA35AB823F /* Pods_weatherAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C2DF51E49E74B3A75753AA7 /* Pods_weatherAppTests.framework */; };
 		44FDAB6EF9F5039478CE34B0 /* Pods_weatherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A863F1CB9B32D587E9B6C5 /* Pods_weatherApp.framework */; };
+		ED0699472247C0E7006974AD /* DetailLocationProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0699462247C0E7006974AD /* DetailLocationProtocols.swift */; };
+		ED0699492247C0F3006974AD /* DetailLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0699482247C0F3006974AD /* DetailLocationView.swift */; };
+		ED06994B2247C101006974AD /* DetailLocationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED06994A2247C101006974AD /* DetailLocationPresenter.swift */; };
+		ED06994D2247C114006974AD /* DetailLocationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED06994C2247C114006974AD /* DetailLocationInteractor.swift */; };
+		ED06994F2247C13F006974AD /* DetailLocationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED06994E2247C13F006974AD /* DetailLocationRouter.swift */; };
+		ED0699512247C14D006974AD /* DetailLocationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0699502247C14D006974AD /* DetailLocationConfigurator.swift */; };
 		ED1201032240415F003453C6 /* AlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1201022240415F003453C6 /* AlertExtension.swift */; };
 		ED1873BC2240D9D500C31A97 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1873BB2240D9D500C31A97 /* LocationService.swift */; };
 		ED1AD17A22413396007A2F37 /* AlamofireWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1AD17922413396007A2F37 /* AlamofireWrapper.swift */; };
@@ -69,6 +75,12 @@
 		6C2DF51E49E74B3A75753AA7 /* Pods_weatherAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weatherAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF16D30722085C52354A0D00 /* Pods-weatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weatherApp.release.xcconfig"; path = "Target Support Files/Pods-weatherApp/Pods-weatherApp.release.xcconfig"; sourceTree = "<group>"; };
 		C2A863F1CB9B32D587E9B6C5 /* Pods_weatherApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weatherApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED0699462247C0E7006974AD /* DetailLocationProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLocationProtocols.swift; sourceTree = "<group>"; };
+		ED0699482247C0F3006974AD /* DetailLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLocationView.swift; sourceTree = "<group>"; };
+		ED06994A2247C101006974AD /* DetailLocationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLocationPresenter.swift; sourceTree = "<group>"; };
+		ED06994C2247C114006974AD /* DetailLocationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLocationInteractor.swift; sourceTree = "<group>"; };
+		ED06994E2247C13F006974AD /* DetailLocationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLocationRouter.swift; sourceTree = "<group>"; };
+		ED0699502247C14D006974AD /* DetailLocationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLocationConfigurator.swift; sourceTree = "<group>"; };
 		ED1201022240415F003453C6 /* AlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtension.swift; sourceTree = "<group>"; };
 		ED1873BB2240D9D500C31A97 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		ED1AD17922413396007A2F37 /* AlamofireWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireWrapper.swift; sourceTree = "<group>"; };
@@ -149,6 +161,19 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		ED0699452247C0C4006974AD /* DetailLocation */ = {
+			isa = PBXGroup;
+			children = (
+				ED0699462247C0E7006974AD /* DetailLocationProtocols.swift */,
+				ED0699482247C0F3006974AD /* DetailLocationView.swift */,
+				ED06994A2247C101006974AD /* DetailLocationPresenter.swift */,
+				ED06994C2247C114006974AD /* DetailLocationInteractor.swift */,
+				ED06994E2247C13F006974AD /* DetailLocationRouter.swift */,
+				ED0699502247C14D006974AD /* DetailLocationConfigurator.swift */,
+			);
+			path = DetailLocation;
+			sourceTree = "<group>";
+		};
 		ED1200FF224040EF003453C6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +241,7 @@
 		ED4969FC223BEB2E005B0B6B /* app-modules */ = {
 			isa = PBXGroup;
 			children = (
+				ED0699452247C0C4006974AD /* DetailLocation */,
 				EDFCEF182243FE84003315DA /* FavoriteLocationList */,
 				ED9ABB88223F7C4800DA6B0C /* BaseModule */,
 				ED9ABB7B223F7AB200DA6B0C /* MapScreen */,
@@ -532,18 +558,22 @@
 				ED9ABB8A223F7C6900DA6B0C /* BaseModuleProtocols.swift in Sources */,
 				ED554D5222477EBA00E66817 /* TransitionHandlerExtension.swift in Sources */,
 				ED1FEEAA22422526003C134D /* NetworkCompletion.swift in Sources */,
+				ED0699472247C0E7006974AD /* DetailLocationProtocols.swift in Sources */,
 				ED1AD17C2241438F007A2F37 /* RequestBuilder.swift in Sources */,
 				ED1201032240415F003453C6 /* AlertExtension.swift in Sources */,
 				EDED8B512244C46E00EE00CD /* LocationCell.swift in Sources */,
 				ED1FEEAC22422783003C134D /* ServerService.swift in Sources */,
+				ED06994F2247C13F006974AD /* DetailLocationRouter.swift in Sources */,
 				ED99FEBD22440E7E0092E49A /* FavoriteLocationListInteractor.swift in Sources */,
 				ED99FEBB22440E720092E49A /* FavoriteLocationListPresenter.swift in Sources */,
+				ED06994B2247C101006974AD /* DetailLocationPresenter.swift in Sources */,
 				ED99FEC122440EA10092E49A /* FavoriteLocationListConfigurator.swift in Sources */,
 				ED1FEEAE22422DA1003C134D /* Parsing.swift in Sources */,
 				ED9ABB81223F7BAB00DA6B0C /* MapScreenPresenter.swift in Sources */,
 				ED99FEB922440E430092E49A /* FavoriteLocationListView.swift in Sources */,
 				ED1FEEB0224263AE003C134D /* AppConstants.swift in Sources */,
 				ED1AD17A22413396007A2F37 /* AlamofireWrapper.swift in Sources */,
+				ED0699492247C0F3006974AD /* DetailLocationView.swift in Sources */,
 				ED985634224394CE004B6759 /* DataManager.swift in Sources */,
 				EDFD2A6222461CFB00870196 /* ImageSwitchHelper.swift in Sources */,
 				EDAB05E9223CE46D003CA764 /* ThemeManager.swift in Sources */,
@@ -553,6 +583,7 @@
 				ED9ABB7D223F7B8700DA6B0C /* MapScreenProtocols.swift in Sources */,
 				ED9ABB85223F7BCD00DA6B0C /* MapScreenRouter.swift in Sources */,
 				EDAB05EB223CE4B2003CA764 /* ThemeProtocol.swift in Sources */,
+				ED06994D2247C114006974AD /* DetailLocationInteractor.swift in Sources */,
 				ED1FEEB222426536003C134D /* DoubleExtension.swift in Sources */,
 				ED99FEBF22440E920092E49A /* FavoriteLocationListRouter.swift in Sources */,
 				ED1873BC2240D9D500C31A97 /* LocationService.swift in Sources */,
@@ -562,6 +593,7 @@
 				ED9ABB83223F7BBC00DA6B0C /* MapScreenInteractor.swift in Sources */,
 				EDAB05E6223CE397003CA764 /* ColorExtension.swift in Sources */,
 				EDAB05EF223CE656003CA764 /* DarkTheme.swift in Sources */,
+				ED0699512247C14D006974AD /* DetailLocationConfigurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

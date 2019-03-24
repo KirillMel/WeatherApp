@@ -52,11 +52,19 @@ class FavoriteLocationListViewController: UIViewController, FavoriteLocationList
         presenter.updateLocationsData()
         self.refreshControl.endRefreshing()
     }
+    
+    //MARK: - segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let configurationHolder = segue.destination as? DetailLocationModuleLoader
+        configurationHolder?.createModule()
+        (sender as? SegueInfo)?.configurationBlock?(configurationHolder?.moduleInput)
+    }
 }
 
 extension FavoriteLocationListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         presenter.locationDidSelect(id: indexPath.row)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
