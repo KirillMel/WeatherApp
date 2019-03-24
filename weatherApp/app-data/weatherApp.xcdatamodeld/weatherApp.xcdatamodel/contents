@@ -10,10 +10,10 @@
     <entity name="Weather" representedClassName="Weather" syncable="YES" codeGenerationType="class">
         <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="locationName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="temperature" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="temperature" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
         <element name="Location" positionX="-544.609375" positionY="66.08984375" width="128" height="118"/>
-        <element name="Weather" positionX="-376.08203125" positionY="-13.953125" width="128" height="88"/>
+        <element name="Weather" positionX="-376.08203125" positionY="-13.953125" width="128" height="90"/>
     </elements>
 </model>

@@ -12,9 +12,11 @@ import CoreData
 protocol LocalSorageProtocol: class {
     func saveItem(_ latitude: Double, _ longitude: Double, _ geolocation: (String, String),  _ detail: String, _ temperature: Int) -> Void
     func deleteItem(withName name: String) throws -> Void
+    func loadData() -> [Location]
+    func updateItems() -> Void
 }
 
-class LocalStorage: LocalSorageProtocol {
+class LocalStorage: LocalSorageProtocol {    
     let context = AppDelegate.viewContext
     
     func saveItem(_ latitude: Double, _ longitude: Double, _ geolocation: (String, String), _ detail: String, _ temperature: Int) {
@@ -25,7 +27,7 @@ class LocalStorage: LocalSorageProtocol {
         
         try? context.save()
         
-        get()
+        //get()
     }
     
     func deleteItem(withName name: String) throws -> Void {
@@ -63,20 +65,21 @@ class LocalStorage: LocalSorageProtocol {
                 try? context.save()
             }
             
-            get()
+            //get()
             
         } catch {
             throw error
         }
     }
     
-    private func get() { //tmp
+    func loadData() -> [Location] { //tmp
         let request: NSFetchRequest<Location> = Location.fetchRequest()
         let matches = try? context.fetch(request)
-        if matches!.count > 0 {
-            for item in matches! {
-                print(item.name)
-            }
-        }
+        
+        return matches ?? [Location]()
+    }
+    
+    func updateItems() {
+        try? context.save()
     }
 }

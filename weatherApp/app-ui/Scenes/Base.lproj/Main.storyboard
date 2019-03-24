@@ -9,6 +9,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--FavoriteLocationList-->
+        <scene sceneID="mzn-Tc-bgZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FavoriteLocationList" id="KFX-54-Lkj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="9mr-lR-jL3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7VN-EK-yC7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="542" y="-204"/>
+        </scene>
         <!--MapScreenViewController-->
         <scene sceneID="dtR-sN-agd">
             <objects>
@@ -17,7 +27,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q8m-N9-enq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="587" y="-331"/>
+            <point key="canvasLocation" x="541" y="18"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Efx-pR-GkG">
@@ -29,7 +39,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="OO8-tX-c0r" kind="relationship" relationship="viewControllers" id="Tc4-KS-rar"/>
+                        <segue destination="KFX-54-Lkj" kind="relationship" relationship="viewControllers" id="c08-fw-X3Q"/>
+                        <segue destination="OO8-tX-c0r" kind="relationship" relationship="viewControllers" id="L4Q-UO-QgF"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e5n-ja-flz" userLabel="First Responder" sceneMemberID="firstResponder"/>

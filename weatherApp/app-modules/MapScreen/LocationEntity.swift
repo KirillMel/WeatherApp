@@ -52,7 +52,7 @@ extension Weather{
             if matches.count > 0 {
                 let item = matches[0]
                 item.detail = detail
-                item.temperature = Int32(temperature)
+                item.temperature = Int64(temperature)
                 return item
             }
             
@@ -62,7 +62,7 @@ extension Weather{
         
         let newItem = Weather(context: context)
         newItem.detail = detail
-        newItem.temperature = Int32(temperature)
+        newItem.temperature = Int64(temperature)
         
         return newItem
     }

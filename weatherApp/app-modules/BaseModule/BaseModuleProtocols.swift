@@ -33,5 +33,7 @@ protocol BaseModuleConfiguratorProtocol: class {
 }
 
 protocol TransitionHandlerProtocol: class {
+    func openModule(segueIdentifier: String, configurationBlock:@escaping (Any?) -> Void)
     
+    func closeModule() -> Void
 }
