@@ -13,7 +13,7 @@ class MapScreenInteractor: MapScreenInteractorProtocol {
     
     weak var presenter: MapScreenPresenterToInteractorProtocol?
     let locationService: LocationServiceProtocol = LocationService()
-    let temperatureService = ServerTemperatureService()
+    let temperatureService = ServerService()
     let localStorage: LocalSorageProtocol = LocalStorage()
     
     private var description: (country: String, region: String) = ("", "")
@@ -23,8 +23,8 @@ class MapScreenInteractor: MapScreenInteractorProtocol {
     required init(presenter: MapScreenPresenterToInteractorProtocol) {
         self.presenter = presenter
         
-        self.temperatureService.setUpService(success: { [weak self] result in
-            self?.temperature = result!
+        self.temperatureService.setUpService(route: .defaultWeather, success: { [weak self] result in
+            self?.temperature = result as! (Int, String)
             self?.group.leave()
         }) { [weak self] error in
             self?.presenter?.loadLocationDidFail(error: error ?? "Fail when loading data")
@@ -55,7 +55,7 @@ class MapScreenInteractor: MapScreenInteractorProtocol {
     }
     
     private func getTemperature(altitude: Double, longitude: Double) {
-        temperatureService.getTemperatur(latitude: altitude, longitute: longitude)
+        temperatureService.getWeather(latitude: altitude, longitute: longitude)
     }
     
     private func sendDataToPresenter() {

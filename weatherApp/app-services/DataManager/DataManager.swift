@@ -26,8 +26,6 @@ class LocalStorage: LocalSorageProtocol {
         let _ = try? Location.initOrFind(name: region, country: country, latitude: latitude, longitude: longitude, temperature: temperature, detail: detail)
         
         try? context.save()
-        
-        //get()
     }
     
     func deleteItem(withName name: String) throws -> Void {
@@ -64,15 +62,12 @@ class LocalStorage: LocalSorageProtocol {
                 context.delete(item)
                 try? context.save()
             }
-            
-            //get()
-            
         } catch {
             throw error
         }
     }
     
-    func loadData() -> [Location] { //tmp
+    func loadData() -> [Location] {
         let request: NSFetchRequest<Location> = Location.fetchRequest()
         let matches = try? context.fetch(request)
         

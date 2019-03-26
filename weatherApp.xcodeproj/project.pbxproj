@@ -33,6 +33,7 @@
 		ED4969F2223BEB20005B0B6B /* weatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4969F1223BEB20005B0B6B /* weatherAppTests.swift */; };
 		ED554D5222477EBA00E66817 /* TransitionHandlerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED554D5122477EBA00E66817 /* TransitionHandlerExtension.swift */; };
 		ED554D5422477F0900E66817 /* WeatherDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED554D5322477F0900E66817 /* WeatherDetails.storyboard */; };
+		ED81F59D2248C22D00B23692 /* WeatherDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED81F59C2248C22D00B23692 /* WeatherDetailCell.swift */; };
 		ED985634224394CE004B6759 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED985633224394CE004B6759 /* DataManager.swift */; };
 		ED99FEB722440E2E0092E49A /* FavoriteLocationListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED99FEB622440E2E0092E49A /* FavoriteLocationListProtocols.swift */; };
 		ED99FEB922440E430092E49A /* FavoriteLocationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED99FEB822440E430092E49A /* FavoriteLocationListView.swift */; };
@@ -53,6 +54,7 @@
 		EDAB05ED223CE54C003CA764 /* LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAB05EC223CE54C003CA764 /* LightTheme.swift */; };
 		EDAB05EF223CE656003CA764 /* DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAB05EE223CE656003CA764 /* DarkTheme.swift */; };
 		EDC798DD2242D4540076F2BA /* LocationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC798DC2242D4540076F2BA /* LocationEntity.swift */; };
+		EDCE49D0224A6D4F0088D1FE /* DetailedWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCE49CF224A6D4F0088D1FE /* DetailedWeather.swift */; };
 		EDED8B512244C46E00EE00CD /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDED8B502244C46E00EE00CD /* LocationCell.swift */; };
 		EDEFB343224016B000744ED8 /* MapScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDEFB342224016B000744ED8 /* MapScreenViewController.storyboard */; };
 		EDFCEF1A2243FF59003315DA /* FavoriteLocationList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDFCEF192243FF59003315DA /* FavoriteLocationList.storyboard */; };
@@ -103,6 +105,7 @@
 		ED4969F3223BEB20005B0B6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED554D5122477EBA00E66817 /* TransitionHandlerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionHandlerExtension.swift; sourceTree = "<group>"; };
 		ED554D5322477F0900E66817 /* WeatherDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WeatherDetails.storyboard; sourceTree = "<group>"; };
+		ED81F59C2248C22D00B23692 /* WeatherDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailCell.swift; sourceTree = "<group>"; };
 		ED985633224394CE004B6759 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		ED99FEB622440E2E0092E49A /* FavoriteLocationListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteLocationListProtocols.swift; sourceTree = "<group>"; };
 		ED99FEB822440E430092E49A /* FavoriteLocationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteLocationListView.swift; sourceTree = "<group>"; };
@@ -123,6 +126,7 @@
 		EDAB05EC223CE54C003CA764 /* LightTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightTheme.swift; sourceTree = "<group>"; };
 		EDAB05EE223CE656003CA764 /* DarkTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkTheme.swift; sourceTree = "<group>"; };
 		EDC798DC2242D4540076F2BA /* LocationEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationEntity.swift; sourceTree = "<group>"; };
+		EDCE49CF224A6D4F0088D1FE /* DetailedWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedWeather.swift; sourceTree = "<group>"; };
 		EDED8B502244C46E00EE00CD /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		EDEFB342224016B000744ED8 /* MapScreenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapScreenViewController.storyboard; sourceTree = "<group>"; };
 		EDFCEF192243FF59003315DA /* FavoriteLocationList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavoriteLocationList.storyboard; sourceTree = "<group>"; };
@@ -170,6 +174,8 @@
 				ED06994C2247C114006974AD /* DetailLocationInteractor.swift */,
 				ED06994E2247C13F006974AD /* DetailLocationRouter.swift */,
 				ED0699502247C14D006974AD /* DetailLocationConfigurator.swift */,
+				ED81F59C2248C22D00B23692 /* WeatherDetailCell.swift */,
+				EDCE49CF224A6D4F0088D1FE /* DetailedWeather.swift */,
 			);
 			path = DetailLocation;
 			sourceTree = "<group>";
@@ -566,6 +572,7 @@
 				ED06994F2247C13F006974AD /* DetailLocationRouter.swift in Sources */,
 				ED99FEBD22440E7E0092E49A /* FavoriteLocationListInteractor.swift in Sources */,
 				ED99FEBB22440E720092E49A /* FavoriteLocationListPresenter.swift in Sources */,
+				EDCE49D0224A6D4F0088D1FE /* DetailedWeather.swift in Sources */,
 				ED06994B2247C101006974AD /* DetailLocationPresenter.swift in Sources */,
 				ED99FEC122440EA10092E49A /* FavoriteLocationListConfigurator.swift in Sources */,
 				ED1FEEAE22422DA1003C134D /* Parsing.swift in Sources */,
@@ -576,6 +583,7 @@
 				ED0699492247C0F3006974AD /* DetailLocationView.swift in Sources */,
 				ED985634224394CE004B6759 /* DataManager.swift in Sources */,
 				EDFD2A6222461CFB00870196 /* ImageSwitchHelper.swift in Sources */,
+				ED81F59D2248C22D00B23692 /* WeatherDetailCell.swift in Sources */,
 				EDAB05E9223CE46D003CA764 /* ThemeManager.swift in Sources */,
 				ED9ABB87223F7BE400DA6B0C /* MapScreenConfigurator.swift in Sources */,
 				ED99FEB722440E2E0092E49A /* FavoriteLocationListProtocols.swift in Sources */,

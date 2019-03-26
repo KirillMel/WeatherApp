@@ -12,7 +12,7 @@ class FavoriteLocationListInteractor: FavoriteLocationListInteractorProtocol {
     weak var presenter: FavoriteLocationListPresenterToInteractorProtocol!
     
     private let localStorage: LocalSorageProtocol = LocalStorage()
-    private let weatherService = ServerTemperatureService()
+    private let weatherService = ServerService()
     
     private var locationList: [Location]
     
@@ -34,9 +34,11 @@ class FavoriteLocationListInteractor: FavoriteLocationListInteractorProtocol {
         let group = DispatchGroup()
         for location in locationList {
             group.enter()
-            weatherService.setUpService(success: { result in
-                location.weather?.temperature = Int64(truncatingIfNeeded: result!.0)
-                location.weather?.detail = result?.1
+            weatherService.setUpService(route: .defaultWeather, success: { result in
+                guard let result = result as? (temperature: Int, description: String) else { return }
+                
+                location.weather?.temperature = Int64(truncatingIfNeeded: result.temperature)
+                location.weather?.detail = result.description
                 
                 self.localStorage.updateItems()
                 
@@ -49,7 +51,7 @@ class FavoriteLocationListInteractor: FavoriteLocationListInteractorProtocol {
             
             UserDefaults.standard.set("Updated : \(timestamp)", forKey: "lastUpdates")
             
-            weatherService.getTemperatur(latitude: location.latitude, longitute: location.longitude)
+            weatherService.getWeather(latitude: location.latitude, longitute: location.longitude)
         }
         group.notify(queue: .main) {
             self.presenter.locationListDidUpdate()

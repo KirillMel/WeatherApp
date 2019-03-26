@@ -9,7 +9,9 @@
 import Foundation
 
 protocol DetailLocationViewProtocol: BaseModuleViewProtocol {
-    func updateView(tmp: String) -> Void
+    func updateView(mainDescription: (temperature: String, description: String, image: String)) -> Void
+    func updateView(withTitle title: String) -> Void
+    func updateTable() -> Void
 }
 
 protocol DetailLocationModuleLoader: class {
@@ -23,15 +25,21 @@ protocol DetailLocationModuleInputProtocol: class {
 }
 
 protocol DetailLocationPresenterToViewProtocol: BaseModulePresenterToViewProtocol {
-    
+    func setUpViewWithData() -> Void
+    func getDetaliedWeather(byId id: Int) -> (description: String, time: String, image: String)
+    func getCount() -> Int
 }
 
 protocol DetailLocationPresenterToInteractorProtocol: BaseModulePresenterToInteractorProtocol {
-    
+    func dataLoadingDidSuccesful() -> Void
 }
 
 protocol DetailLocationInteractorProtocol: BaseModuleInteractorProtocol {
     func setSelectedlocation(_ location: Location) -> Void
+    func getDetaliedWeather(byId id: Int) -> DetailedWeather?
+    func getData() -> Location
+    func getCount() -> Int
+    func loadWeatherData() -> Void
 }
 
 protocol DetailLocationRouterProtocol: BaseModuleRouterProtocol {

@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-class ParserEntety<T> where T: Mappable{
+class ParserEntity<T> where T: Mappable{
     func parse(_ data: Any?) -> T? {
         guard let object = data as? NSObject else { return nil }
         return Mapper<T>().map(JSONObject: object)
@@ -22,18 +22,24 @@ class ParserEntety<T> where T: Mappable{
 }
 
 class ParserRaw{
-    func parse(_ data: Any?) -> (Int, String)? {
-        let b = data as! NSDictionary
-        let description = (((b["weather"] as! NSArray)[0] as! NSDictionary)["description"]) as? String
-        let temperature = (((b["main"] as! NSDictionary)["temp"] as! Double)  - CELVIN_TO_CELSIUS).toInt()
+    func parseRaw(_ data: Any?) -> (temperature: Int, description: String)? {
+        let raw = data as! NSDictionary
+        let description = (((raw["weather"] as! NSArray)[0] as! NSDictionary)["description"]) as? String
+        let temperature = (((raw["main"] as! NSDictionary)["temp"] as! Double)  - CELVIN_TO_CELSIUS).toInt()
 
-        guard temperature != nil, description != nil else { return nil}
+        guard temperature != nil, description != nil else { return nil }
         
         return (temperature!, description!)
     }
     
-    func parse(_ data: Any?) -> [String] {
-        //guard let object = data as? NSObject else { return [String]() }
-        return  [String]()
+    func parseArray(_ data: Any?) -> [DetailedWeather] {
+        let arrayOfData = (data as? NSDictionary)?["list"] as! NSArray
+        var resultArray = [DetailedWeather]()
+        
+        for item in arrayOfData {
+            let rawValue = parseRaw(item)
+            resultArray.append(DetailedWeather(time: "\((item as! NSDictionary)["dt_txt"] ?? "")", temperature: rawValue?.temperature, description: rawValue?.description))
+        }
+        return resultArray
     }
 }
