@@ -38,8 +38,10 @@ class DetailLocationPresenter: DetailLocationPresenterToViewProtocol, DetailLoca
         var time = weather?.time ?? ""
         time = String(time.replacingOccurrences(of: "2019-", with: "").dropLast(3))
         let image = ImageSwitchHelper.shared.switchImage(description: weather?.description ?? "")
-        let temperature = (weather?.temperature)! > 0 ? "+\(weather?.temperature)°C" : "\(weather?.temperature)°C"
-        let description = "\(weather?.description ?? ""), \(temperature)"
+        let temperature = (weather?.temperature)! > 0 ? "+\((weather?.temperature)!)°C" : "\((weather?.temperature)!)°C"
+        var description = "\(weather?.description ?? ""), \(temperature)"
+        description.capitalizeFirstLetter()
+        
         return (description, time, image)
     }
     

@@ -16,7 +16,9 @@ class ImageSwitchHelper {
         switch(value) {
         case "clear sky" : return "clear.png"
         case "light rain" : return "light_rain.png"
-        case "scattered clouds" : return "light_clouds.png"
+        case "rain", "snow" : return "raing.png"
+        case "few clouds" : return "light_clouds.png"
+        case "scattered clouds" : return "most_clouds.png"
         default: return "clouds.png"
         }
     }
