@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "weatherApp/app-modules/DetailLocation/DetailLocationInteractor.swift"
-            timestampString = "575237542.929081"
+            timestampString = "575320261.758383"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "getDetaliedWeather(byId:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "weatherApp/app-modules/DetailLocation/DetailLocationInteractor.swift"
-            timestampString = "575237542.929152"
+            timestampString = "575320261.758492"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "loadWeatherData()"
             landmarkType = "7">
          </BreakpointContent>

@@ -13,7 +13,6 @@ class DetailLocationInteractor: DetailLocationInteractorProtocol {
     weak var presenter: DetailLocationPresenterToInteractorProtocol!
     //MARK: - services
     private let remoteService = ServerService()
-    private let localStorage: LocalSorageProtocol = LocalStorage()
     //MARK: - Entities, variables
     private weak var location: Location?
     private var weatherDetailList: [DetailedWeather] = [DetailedWeather]()
@@ -43,10 +42,7 @@ class DetailLocationInteractor: DetailLocationInteractorProtocol {
         remoteService.setUpService(route: .detailedWeather, success: { result in
             guard let result = result as? [DetailedWeather] else { return }
             self.weatherDetailList = result
-            self.location?.weather?.detail = result[0].description
-            self.location?.weather?.temperature = Int64(truncatingIfNeeded: result[0].temperature ?? 0)
             self.presenter.dataLoadingDidSuccesful()
-            self.localStorage.updateItems()
         }) { error in
             
         }

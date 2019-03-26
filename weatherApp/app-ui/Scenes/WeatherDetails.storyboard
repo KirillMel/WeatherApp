@@ -113,15 +113,26 @@
                                             <constraint firstAttribute="trailing" secondItem="4Dc-ho-5MW" secondAttribute="trailing" id="ebr-SI-710"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JRM-ZK-Vlt">
+                                        <rect key="frame" x="0.0" y="109" width="375" height="1"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="Iun-mT-ssc"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="FTf-2p-2se"/>
+                                    <constraint firstAttribute="bottom" secondItem="JRM-ZK-Vlt" secondAttribute="bottom" id="Jda-hA-elX"/>
                                     <constraint firstItem="BQ7-KS-tvs" firstAttribute="top" secondItem="F8y-b7-qj8" secondAttribute="top" id="M5w-vl-41Q"/>
                                     <constraint firstItem="12j-gb-dEG" firstAttribute="width" secondItem="F8y-b7-qj8" secondAttribute="width" multiplier="0.5" id="WI4-Dx-iBf"/>
                                     <constraint firstItem="12j-gb-dEG" firstAttribute="centerX" secondItem="F8y-b7-qj8" secondAttribute="centerX" id="Zry-jz-3Yt"/>
                                     <constraint firstAttribute="bottom" secondItem="12j-gb-dEG" secondAttribute="bottom" constant="8" id="cab-3d-Wov"/>
+                                    <constraint firstItem="JRM-ZK-Vlt" firstAttribute="width" secondItem="F8y-b7-qj8" secondAttribute="width" id="kOT-vL-whe"/>
+                                    <constraint firstItem="JRM-ZK-Vlt" firstAttribute="leading" secondItem="F8y-b7-qj8" secondAttribute="leading" id="lVP-S9-Cha"/>
                                     <constraint firstItem="12j-gb-dEG" firstAttribute="top" secondItem="BQ7-KS-tvs" secondAttribute="bottom" constant="1" id="mwk-ur-iM2"/>
+                                    <constraint firstAttribute="trailing" secondItem="JRM-ZK-Vlt" secondAttribute="trailing" id="ufM-x1-Irv"/>
                                     <constraint firstItem="BQ7-KS-tvs" firstAttribute="centerX" secondItem="F8y-b7-qj8" secondAttribute="centerX" id="uuS-63-80M"/>
                                 </constraints>
                             </view>

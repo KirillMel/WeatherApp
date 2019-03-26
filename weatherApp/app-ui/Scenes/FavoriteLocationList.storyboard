@@ -36,7 +36,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLQ-C3-a4A">
-                                                    <rect key="frame" x="30" y="36.5" width="150" height="17"/>
+                                                    <rect key="frame" x="15" y="36.5" width="150" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -49,7 +49,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i20-bo-6Cu">
-                                                    <rect key="frame" x="203.5" y="23.5" width="112.5" height="18"/>
+                                                    <rect key="frame" x="166" y="23.5" width="150" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -64,11 +64,11 @@
                                                 <constraint firstAttribute="bottom" secondItem="SrS-nA-fn1" secondAttribute="bottom" constant="17" id="FDb-UV-CZM"/>
                                                 <constraint firstItem="SrS-nA-fn1" firstAttribute="leading" secondItem="i20-bo-6Cu" secondAttribute="trailing" constant="8" id="Gx6-hz-Ezg"/>
                                                 <constraint firstItem="i20-bo-6Cu" firstAttribute="top" secondItem="7O8-PF-oxk" secondAttribute="topMargin" constant="12" id="dfn-1n-ftS"/>
-                                                <constraint firstItem="i20-bo-6Cu" firstAttribute="width" secondItem="7O8-PF-oxk" secondAttribute="width" multiplier="0.3" id="esV-Lt-WTi"/>
+                                                <constraint firstItem="i20-bo-6Cu" firstAttribute="width" secondItem="7O8-PF-oxk" secondAttribute="width" multiplier="0.4" id="esV-Lt-WTi"/>
                                                 <constraint firstItem="8Ac-HC-an9" firstAttribute="width" secondItem="7O8-PF-oxk" secondAttribute="width" multiplier="0.4" id="gBt-uN-dzf"/>
                                                 <constraint firstItem="8Ac-HC-an9" firstAttribute="width" secondItem="kLQ-C3-a4A" secondAttribute="width" id="jSk-87-BMq"/>
                                                 <constraint firstItem="i20-bo-6Cu" firstAttribute="centerY" secondItem="7O8-PF-oxk" secondAttribute="centerY" id="jTy-aj-ZTK"/>
-                                                <constraint firstItem="kLQ-C3-a4A" firstAttribute="leading" secondItem="7O8-PF-oxk" secondAttribute="leadingMargin" constant="15" id="kf2-hJ-WVu"/>
+                                                <constraint firstItem="kLQ-C3-a4A" firstAttribute="leading" secondItem="7O8-PF-oxk" secondAttribute="leadingMargin" id="kf2-hJ-WVu"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
